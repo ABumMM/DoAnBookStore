@@ -11,10 +11,7 @@ import DANGNHAP.DangNhap;
 import KMForm.KMForm;
 import DANGNHAP.TAIKHOAN;
 import java.awt.Color; 
-/**
- *
- * @author hoang
- */
+
 import HOADON.HOADON;
 import ThongTinTK.ThongTin;
 import java.awt.BorderLayout;

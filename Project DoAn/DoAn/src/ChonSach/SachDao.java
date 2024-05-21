@@ -32,6 +32,7 @@ public class SachDao {
                 s.setSLTon(rs.getString("SLTon"));
                 s.setGiaBan(rs.getString("GiaBan"));
                 s.setTheLoai(rs.getString("TenTL"));
+                s.setHinhAnh(rs.getString("HinhAnh"));
                 list.add(s);
             }
             ps.close();
