@@ -25,7 +25,7 @@ public class SachFrame extends javax.swing.JFrame {
     SachDao sdao = new SachDao();
     DefaultTableModel model;
     String[] listColumn = {"Mã sách", "Tên sách", "Tác giả", "Năm xuất bản", "Số lượng còn"
-                           ,"Giá" ,"Thể loại"};  
+                           ,"Giá" ,"Thể loại", "Hình ảnh"};  
     private TableRowSorter<TableModel> rowSorter = null;
     CTHD cthd;
     FCTPN ctpn;
