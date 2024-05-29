@@ -138,6 +138,7 @@ public class SachFrame extends javax.swing.JFrame {
         table.repaint();
         JScrollPane scrollpane = new JScrollPane();
         scrollpane.getViewport().add(table);
+        scrollpane.setPreferredSize(new Dimension(600,563));
         jpnView.removeAll();
         jpnView.setLayout(new BorderLayout());
         jpnView.add(scrollpane);

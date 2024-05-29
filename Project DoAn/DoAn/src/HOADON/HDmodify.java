@@ -14,6 +14,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.*;
 import javax.swing.JOptionPane;
+
 public class HDmodify {
     public static HD find(String MaHD) throws Exception {
         String SQL = "select * from HD where MaHD = ?";
@@ -48,7 +49,7 @@ public class HDmodify {
     }
     public static boolean InsertHD(HD hd) throws Exception{
        Connection connection = JDBCConnection.getJDBCConnection();
-       String sql = "INSERT INTO HOADON(MaHD, NgayMuaSach, MaNV, MaKH, MaKM) VALUES(?,?,?,?,?)";
+       String sql = "INSERT INTO HD(MaHD, NgayMuaSach, MaNV, MaKH, MaKM) VALUES(?,?,?,?,?)";
        try(
            PreparedStatement ps = connection.prepareStatement(sql);
         ){
@@ -88,4 +89,33 @@ public class HDmodify {
        }
         return false;
     }
+    
+    public static double layTongTienHoaDon(String MaHD) throws Exception {
+        Connection connection = null;
+        CallableStatement cs = null;
+        double tongTien = 0;
+
+        try {
+            // Kết nối đến cơ sở dữ liệu
+            connection = JDBCConnection.getJDBCConnection();
+
+            // Tạo câu lệnh gọi thủ tục lưu trữ để tính tổng tiền hóa đơn
+            String sql = "{call Tinh_TongHD(?)}";
+            cs = connection.prepareCall(sql);
+            cs.setString(1, MaHD);
+
+            // Thực thi câu lệnh và lấy kết quả
+            ResultSet rs = cs.executeQuery();
+
+            // Xử lý kết quả, lấy tổng tiền từ ResultSet
+            if (rs.next()) {
+                tongTien = rs.getDouble(1); // Giả sử tổng tiền được trả về ở cột đầu tiên
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+
+        return tongTien;
+    }
+
 }

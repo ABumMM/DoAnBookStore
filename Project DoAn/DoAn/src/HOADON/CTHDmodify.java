@@ -8,6 +8,8 @@ package HOADON;
 import doan.JDBCConnection;
 import java.sql.Connection;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 /**
  *
  * @author hoang
@@ -67,5 +69,27 @@ public class CTHDmodify {
            cs.setInt(3, SL);
            return cs.execute();
        }
+    }
+    public static List<chitiet> getListCTHD(String MaHD) throws Exception {
+        List<chitiet> listCTHD = new ArrayList<>();
+        String SQL = "SELECT * FROM chitiet WHERE MaHD = ?";
+        
+        try (
+            Connection conn = JDBCConnection.getJDBCConnection();
+            PreparedStatement ps = conn.prepareStatement(SQL);
+        ) {
+            ps.setString(1, MaHD);
+            ResultSet rs = ps.executeQuery();
+            
+            while (rs.next()) {
+                chitiet ct = new chitiet();
+                ct.setMaHD(rs.getString("MaHD"));
+                ct.setMaSach(rs.getString("MaSach"));
+                ct.setSoLuong(rs.getInt("SoLuong"));
+                listCTHD.add(ct);
+            }
+        }
+        
+        return listCTHD;
     }
 }

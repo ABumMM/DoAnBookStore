@@ -14,27 +14,25 @@ import java.sql.Date;
 
 public class tacvusach {
     public boolean insert(ClassSach S)  throws Exception {
-        String SQL = "insert into Sach(MaSach, TenSach, TenTG, NamXB, SLTon, GiaBan, MaTL ) values(?,?,?,?,?,?,?)";
-        
-        try(
-             Connection conn = connect.getJDBCConnection();
-             PreparedStatement ps = conn.prepareStatement(SQL);
-        
-            ){
-            ps.setString(1, S.getMaSach());
-            ps.setString(2, S.getTenSach());
-            ps.setString(3, S.getTenTG());
-            ps.setDate(4, (Date) S.getNamXB());
-            ps.setString(5, S.getSLTon());
-            ps.setString(6, S.getGiaBan());
-            ps.setString(7, S.getMaTL());
-            
-               
-            return ps.executeUpdate() >0;
-        }        
+        String SQL = "INSERT INTO Sach (MaSach, TenSach, TenTG, NamXB, SLTon, GiaBan, MaTL, HinhAnh) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    
+        try (
+            Connection conn = connect.getJDBCConnection();
+            PreparedStatement ps = conn.prepareStatement(SQL);
+            ) {
+                ps.setString(1, S.getMaSach());
+                ps.setString(2, S.getTenSach());
+                ps.setString(3, S.getTenTG());
+                ps.setDate(4, new java.sql.Date(S.getNamXB().getTime())); 
+                ps.setString(5, S.getSLTon());
+                ps.setString(6, S.getGiaBan());
+                ps.setString(7, S.getMaTL());
+                ps.setString(8, S.getHinhAnh());
+                return ps.executeUpdate() > 0;
+        }      
     }
     
-      public ClassSach find(String MaSach) throws Exception {
+    public ClassSach find(String MaSach) throws Exception {
         String SQL = "select * from Sach where MaSach =?";
         
         try(
@@ -61,25 +59,22 @@ public class tacvusach {
     }
       
     public boolean update(ClassSach S)  throws Exception {
-        String SQL = "update Sach set  TenSach = ?, TenTG = ?, NamXB=?, SLTon=?, GiaBan=?, MaTL=? where MaSach = ?";
-        
-        try(
-             Connection conn = connect.getJDBCConnection();
-             PreparedStatement ps = conn.prepareStatement(SQL);
-        
-            )
-        {
-               
-            ps.setString(7, S.getMaSach());
-            ps.setString(1, S.getTenSach());
-            ps.setString(2, S.getTenTG());
-            ps.setDate(3, (Date) S.getNamXB());
-            ps.setString(4, S.getSLTon());
-            ps.setString(5, S.getGiaBan());
-            ps.setString(6, S.getMaTL());
-            
-            return ps.executeUpdate() >0;
-        }        
+        String SQL = "UPDATE Sach SET TenSach = ?, TenTG = ?, NamXB = ?, SLTon = ?, GiaBan = ?, MaTL = ?, HinhAnh = ? WHERE MaSach = ?";
+    
+    try (
+        Connection conn = connect.getJDBCConnection();
+        PreparedStatement ps = conn.prepareStatement(SQL);
+    ) {
+        ps.setString(1, S.getTenSach());
+        ps.setString(2, S.getTenTG());
+        ps.setDate(3, new java.sql.Date(S.getNamXB().getTime())); // Chuyển đổi từ java.util.Date sang java.sql.Date
+        ps.setString(4, S.getSLTon());
+        ps.setString(5, S.getGiaBan());
+        ps.setString(6, S.getMaTL());
+        ps.setString(7, S.getHinhAnh());
+        ps.setString(8, S.getMaSach());
+        return ps.executeUpdate() > 0;
+    }
     }
     
     public boolean delete(String MaSach) throws Exception {

@@ -37,6 +37,7 @@ import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import net.sf.jasperreports.view.JasperViewer;
 import java.math.BigDecimal;
 import javax.swing.JPanel;
+import net.sf.jasperreports.engine.util.JRLoader;
 
 public class BCForm extends javax.swing.JFrame {
 
@@ -53,7 +54,7 @@ public class BCForm extends javax.swing.JFrame {
     }
 
     public JPanel getJPN(){
-        return jpnBC;
+        return panelBoderFrm2;
     }
     public void KetNoiCSDL(){ 
         try {
@@ -95,165 +96,479 @@ public class BCForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jpnBC = new javax.swing.JPanel();
-        nam = new javax.swing.JButton();
-        thang = new javax.swing.JButton();
-        topSach = new javax.swing.JButton();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        panelBoderFrm2 = new PanelBoder.PanelBoderFrm();
+        panelBordertamgiactrai4 = new PanelBoder.PanelBordertamgiactrai();
+        panelBordertamgiactrai5 = new PanelBoder.PanelBordertamgiactrai();
         TopKH = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        panelBordertamgiacphai1 = new PanelBoder.PanelBordertamgiacphai();
+        panelBordertamgiacphai2 = new PanelBoder.PanelBordertamgiacphai();
+        nam = new javax.swing.JButton();
+        panelBordertamgiacphai3 = new PanelBoder.PanelBordertamgiacphai();
+        thang = new javax.swing.JButton();
+        panelBordertamgiacphai4 = new PanelBoder.PanelBordertamgiacphai();
+        topSach = new javax.swing.JButton();
+        panelBordertamgiacphai5 = new PanelBoder.PanelBordertamgiacphai();
+        panelBordertamgiac2 = new PanelBoder.PanelBordertamgiac();
+        panelBordertamgiactrai1 = new PanelBoder.PanelBordertamgiactrai();
+        panelBordertamgiactrai2 = new PanelBoder.PanelBordertamgiactrai();
+        panelBordertamgiactrai3 = new PanelBoder.PanelBordertamgiactrai();
+        pieChartIcon2 = new PanelBoder.PieChartIcon();
+        barChartIcon1 = new PanelBoder.BarChartIcon();
+
+        jCheckBox1.setText("jCheckBox1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jpnBC.setLayout(new java.awt.GridLayout(4, 1, 2, 2));
+        panelBoderFrm2.setBackground(new java.awt.Color(0, 51, 102));
 
-        nam.setBackground(new java.awt.Color(255, 204, 153));
-        nam.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        nam.setText("Doanh thu từng năm");
-        nam.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                namActionPerformed(evt);
-            }
-        });
-        jpnBC.add(nam);
+        panelBordertamgiactrai4.setBackground(new java.awt.Color(255, 153, 0));
 
-        thang.setBackground(new java.awt.Color(255, 204, 102));
-        thang.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        thang.setText("Doanh thu theo tháng");
-        thang.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                thangActionPerformed(evt);
-            }
-        });
-        jpnBC.add(thang);
+        javax.swing.GroupLayout panelBordertamgiactrai4Layout = new javax.swing.GroupLayout(panelBordertamgiactrai4);
+        panelBordertamgiactrai4.setLayout(panelBordertamgiactrai4Layout);
+        panelBordertamgiactrai4Layout.setHorizontalGroup(
+            panelBordertamgiactrai4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 75, Short.MAX_VALUE)
+        );
+        panelBordertamgiactrai4Layout.setVerticalGroup(
+            panelBordertamgiactrai4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 84, Short.MAX_VALUE)
+        );
 
-        topSach.setBackground(new java.awt.Color(249, 163, 76));
-        topSach.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        topSach.setText("Top sách bán chạy theo năm");
-        topSach.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                topSachActionPerformed(evt);
-            }
-        });
-        jpnBC.add(topSach);
+        panelBordertamgiactrai5.setBackground(new java.awt.Color(249, 163, 76));
+
+        javax.swing.GroupLayout panelBordertamgiactrai5Layout = new javax.swing.GroupLayout(panelBordertamgiactrai5);
+        panelBordertamgiactrai5.setLayout(panelBordertamgiactrai5Layout);
+        panelBordertamgiactrai5Layout.setHorizontalGroup(
+            panelBordertamgiactrai5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 75, Short.MAX_VALUE)
+        );
+        panelBordertamgiactrai5Layout.setVerticalGroup(
+            panelBordertamgiactrai5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 87, Short.MAX_VALUE)
+        );
 
         TopKH.setBackground(new java.awt.Color(255, 153, 0));
-        TopKH.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        TopKH.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         TopKH.setText("Top khách hàng có hóa đơn cao theo năm");
+        TopKH.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         TopKH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TopKHActionPerformed(evt);
             }
         });
-        jpnBC.add(TopKH);
+
+        jPanel1.setBackground(new java.awt.Color(255, 153, 153));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Doanh thu");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
+        );
+
+        panelBordertamgiacphai1.setBackground(new java.awt.Color(255, 153, 153));
+
+        javax.swing.GroupLayout panelBordertamgiacphai1Layout = new javax.swing.GroupLayout(panelBordertamgiacphai1);
+        panelBordertamgiacphai1.setLayout(panelBordertamgiacphai1Layout);
+        panelBordertamgiacphai1Layout.setHorizontalGroup(
+            panelBordertamgiacphai1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 75, Short.MAX_VALUE)
+        );
+        panelBordertamgiacphai1Layout.setVerticalGroup(
+            panelBordertamgiacphai1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        panelBordertamgiacphai2.setBackground(new java.awt.Color(255, 204, 153));
+
+        javax.swing.GroupLayout panelBordertamgiacphai2Layout = new javax.swing.GroupLayout(panelBordertamgiacphai2);
+        panelBordertamgiacphai2.setLayout(panelBordertamgiacphai2Layout);
+        panelBordertamgiacphai2Layout.setHorizontalGroup(
+            panelBordertamgiacphai2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 75, Short.MAX_VALUE)
+        );
+        panelBordertamgiacphai2Layout.setVerticalGroup(
+            panelBordertamgiacphai2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 87, Short.MAX_VALUE)
+        );
+
+        nam.setBackground(new java.awt.Color(255, 204, 153));
+        nam.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        nam.setText("Doanh thu từng năm");
+        nam.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        nam.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                namActionPerformed(evt);
+            }
+        });
+
+        panelBordertamgiacphai3.setBackground(new java.awt.Color(255, 204, 102));
+
+        javax.swing.GroupLayout panelBordertamgiacphai3Layout = new javax.swing.GroupLayout(panelBordertamgiacphai3);
+        panelBordertamgiacphai3.setLayout(panelBordertamgiacphai3Layout);
+        panelBordertamgiacphai3Layout.setHorizontalGroup(
+            panelBordertamgiacphai3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 75, Short.MAX_VALUE)
+        );
+        panelBordertamgiacphai3Layout.setVerticalGroup(
+            panelBordertamgiacphai3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 87, Short.MAX_VALUE)
+        );
+
+        thang.setBackground(new java.awt.Color(255, 204, 102));
+        thang.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        thang.setText("Doanh thu theo tháng");
+        thang.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        thang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                thangActionPerformed(evt);
+            }
+        });
+
+        panelBordertamgiacphai4.setBackground(new java.awt.Color(249, 163, 76));
+
+        javax.swing.GroupLayout panelBordertamgiacphai4Layout = new javax.swing.GroupLayout(panelBordertamgiacphai4);
+        panelBordertamgiacphai4.setLayout(panelBordertamgiacphai4Layout);
+        panelBordertamgiacphai4Layout.setHorizontalGroup(
+            panelBordertamgiacphai4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 75, Short.MAX_VALUE)
+        );
+        panelBordertamgiacphai4Layout.setVerticalGroup(
+            panelBordertamgiacphai4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 87, Short.MAX_VALUE)
+        );
+
+        topSach.setBackground(new java.awt.Color(249, 163, 76));
+        topSach.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        topSach.setText("Top sách bán chạy theo năm");
+        topSach.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        topSach.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                topSachActionPerformed(evt);
+            }
+        });
+
+        panelBordertamgiacphai5.setBackground(new java.awt.Color(255, 153, 0));
+
+        javax.swing.GroupLayout panelBordertamgiacphai5Layout = new javax.swing.GroupLayout(panelBordertamgiacphai5);
+        panelBordertamgiacphai5.setLayout(panelBordertamgiacphai5Layout);
+        panelBordertamgiacphai5Layout.setHorizontalGroup(
+            panelBordertamgiacphai5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 75, Short.MAX_VALUE)
+        );
+        panelBordertamgiacphai5Layout.setVerticalGroup(
+            panelBordertamgiacphai5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 84, Short.MAX_VALUE)
+        );
+
+        panelBordertamgiac2.setBackground(new java.awt.Color(255, 204, 204));
+
+        javax.swing.GroupLayout panelBordertamgiac2Layout = new javax.swing.GroupLayout(panelBordertamgiac2);
+        panelBordertamgiac2.setLayout(panelBordertamgiac2Layout);
+        panelBordertamgiac2Layout.setHorizontalGroup(
+            panelBordertamgiac2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        panelBordertamgiac2Layout.setVerticalGroup(
+            panelBordertamgiac2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 56, Short.MAX_VALUE)
+        );
+
+        panelBordertamgiactrai1.setBackground(new java.awt.Color(255, 153, 153));
+
+        javax.swing.GroupLayout panelBordertamgiactrai1Layout = new javax.swing.GroupLayout(panelBordertamgiactrai1);
+        panelBordertamgiactrai1.setLayout(panelBordertamgiactrai1Layout);
+        panelBordertamgiactrai1Layout.setHorizontalGroup(
+            panelBordertamgiactrai1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 75, Short.MAX_VALUE)
+        );
+        panelBordertamgiactrai1Layout.setVerticalGroup(
+            panelBordertamgiactrai1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        panelBordertamgiactrai2.setBackground(new java.awt.Color(255, 204, 153));
+
+        javax.swing.GroupLayout panelBordertamgiactrai2Layout = new javax.swing.GroupLayout(panelBordertamgiactrai2);
+        panelBordertamgiactrai2.setLayout(panelBordertamgiactrai2Layout);
+        panelBordertamgiactrai2Layout.setHorizontalGroup(
+            panelBordertamgiactrai2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 75, Short.MAX_VALUE)
+        );
+        panelBordertamgiactrai2Layout.setVerticalGroup(
+            panelBordertamgiactrai2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        panelBordertamgiactrai3.setBackground(new java.awt.Color(255, 204, 102));
+
+        javax.swing.GroupLayout panelBordertamgiactrai3Layout = new javax.swing.GroupLayout(panelBordertamgiactrai3);
+        panelBordertamgiactrai3.setLayout(panelBordertamgiactrai3Layout);
+        panelBordertamgiactrai3Layout.setHorizontalGroup(
+            panelBordertamgiactrai3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 75, Short.MAX_VALUE)
+        );
+        panelBordertamgiactrai3Layout.setVerticalGroup(
+            panelBordertamgiactrai3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 87, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout pieChartIcon2Layout = new javax.swing.GroupLayout(pieChartIcon2);
+        pieChartIcon2.setLayout(pieChartIcon2Layout);
+        pieChartIcon2Layout.setHorizontalGroup(
+            pieChartIcon2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 218, Short.MAX_VALUE)
+        );
+        pieChartIcon2Layout.setVerticalGroup(
+            pieChartIcon2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 193, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout barChartIcon1Layout = new javax.swing.GroupLayout(barChartIcon1);
+        barChartIcon1.setLayout(barChartIcon1Layout);
+        barChartIcon1Layout.setHorizontalGroup(
+            barChartIcon1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 237, Short.MAX_VALUE)
+        );
+        barChartIcon1Layout.setVerticalGroup(
+            barChartIcon1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 259, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout panelBoderFrm2Layout = new javax.swing.GroupLayout(panelBoderFrm2);
+        panelBoderFrm2.setLayout(panelBoderFrm2Layout);
+        panelBoderFrm2Layout.setHorizontalGroup(
+            panelBoderFrm2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBoderFrm2Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addGroup(panelBoderFrm2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panelBoderFrm2Layout.createSequentialGroup()
+                        .addComponent(panelBordertamgiactrai5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(topSach, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelBoderFrm2Layout.createSequentialGroup()
+                        .addGroup(panelBoderFrm2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelBoderFrm2Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(panelBordertamgiactrai3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(panelBoderFrm2Layout.createSequentialGroup()
+                                .addComponent(barChartIcon1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)))
+                        .addGroup(panelBoderFrm2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelBoderFrm2Layout.createSequentialGroup()
+                                .addComponent(panelBordertamgiactrai2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(panelBoderFrm2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panelBoderFrm2Layout.createSequentialGroup()
+                                        .addComponent(nam, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(panelBordertamgiacphai2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(panelBoderFrm2Layout.createSequentialGroup()
+                                        .addComponent(panelBordertamgiactrai1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(panelBoderFrm2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(panelBoderFrm2Layout.createSequentialGroup()
+                                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(panelBordertamgiacphai1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(panelBordertamgiac2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(panelBoderFrm2Layout.createSequentialGroup()
+                                .addComponent(thang, javax.swing.GroupLayout.PREFERRED_SIZE, 421, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(panelBordertamgiacphai3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGroup(panelBoderFrm2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelBoderFrm2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(panelBordertamgiacphai4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelBoderFrm2Layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(pieChartIcon2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(37, 37, 37))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBoderFrm2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelBordertamgiactrai4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(TopKH, javax.swing.GroupLayout.PREFERRED_SIZE, 742, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(panelBordertamgiacphai5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(137, 137, 137))
+        );
+        panelBoderFrm2Layout.setVerticalGroup(
+            panelBoderFrm2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBoderFrm2Layout.createSequentialGroup()
+                .addGroup(panelBoderFrm2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBoderFrm2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(pieChartIcon2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18))
+                    .addGroup(panelBoderFrm2Layout.createSequentialGroup()
+                        .addGap(69, 69, 69)
+                        .addGroup(panelBoderFrm2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(barChartIcon1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelBoderFrm2Layout.createSequentialGroup()
+                                .addComponent(panelBordertamgiac2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(panelBoderFrm2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(panelBordertamgiacphai1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(panelBordertamgiactrai1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(panelBoderFrm2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(panelBordertamgiactrai2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(nam, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(panelBordertamgiacphai2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                .addGroup(panelBoderFrm2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelBordertamgiacphai3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(thang, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelBordertamgiactrai3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelBoderFrm2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelBordertamgiacphai4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(topSach, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelBordertamgiactrai5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelBoderFrm2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(TopKH, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelBordertamgiacphai5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelBordertamgiactrai4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(93, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(104, 104, 104)
-                .addComponent(jpnBC, javax.swing.GroupLayout.PREFERRED_SIZE, 601, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(40, Short.MAX_VALUE))
+            .addComponent(panelBoderFrm2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(67, Short.MAX_VALUE)
-                .addComponent(jpnBC, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(58, 58, 58))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(panelBoderFrm2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void namActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namActionPerformed
-        disableAccessWarnings();
-        
-        try{
-        conn = JDBCConnection.getJDBCConnection();
-        
-        JasperDesign jd  = JRXmlLoader.load("D:\\OneDrive\\Máy tính\\MHN3#2\\java\\AppBanSach\\DoAn\\file report\\DoanhSoNam.jrxml");
-        JasperReport jr = JasperCompileManager.compileReport("D:\\OneDrive\\Máy tính\\MHN3#2\\java\\AppBanSach\\DoAn\\file report\\DoanhSoNam.jasper");
-        JasperPrint  jp = JasperFillManager.fillReport(jr, new HashMap(),conn);
-        JasperViewer jv = new JasperViewer(jp,false);
-        jv.setVisible(true);
-        
-        }
+    private void topSachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_topSachActionPerformed
+            disableAccessWarnings();
 
-        catch(Exception e){
+        try {
+            conn = JDBCConnection.getJDBCConnection();
+
+            // Nhập năm cần thống kê
+            String inputYear = JOptionPane.showInputDialog("Nhập năm cần thống kê: ");
+            BigDecimal nam = new BigDecimal(inputYear);
+            Map<String, Object> parameters = new HashMap<>();
+            parameters.put("Năm", nam);
+
+            // Load file báo cáo Jasper đã biên dịch
+            JasperReport jr = JasperCompileManager.compileReport("D:\\OneDrive\\Máy tính\\MHN3#2\\java\\AppBanSach\\DoAn\\file report\\TopSach.jasper");
+
+            // Nếu tệp tồn tại, thì tiếp tục
+            if (jr != null) {
+                // Tạo và hiển thị báo cáo
+                JasperPrint jp = JasperFillManager.fillReport(jr, parameters, conn);
+                JasperViewer jv = new JasperViewer(jp, false);
+                jv.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(this, "Không thể tải mẫu báo cáo!");
+            }
+        } catch(Exception e) {
             JOptionPane.showMessageDialog(null, e);
-         }
-    }//GEN-LAST:event_namActionPerformed
+        }
+    }//GEN-LAST:event_topSachActionPerformed
 
     private void thangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thangActionPerformed
         // TODO add your handling code here:
         disableAccessWarnings();
-        
-        try{
-        conn = JDBCConnection.getJDBCConnection();
-        
-        String i = JOptionPane.showInputDialog("Nhập năm cần thống kê: "); 
-        BigDecimal nam= new BigDecimal(i);
-        Map<String, Object> parameters = new HashMap<String, Object>();
-        parameters.put("Năm",nam);
-        
-        JasperDesign jd  = JRXmlLoader.load("D:\\OneDrive\\Máy tính\\MHN3#2\\java\\AppBanSach\\DoAn\\file report\\DoanhSoThang.jrxml");
-        JasperReport jr = JasperCompileManager.compileReport("D:\\OneDrive\\Máy tính\\MHN3#2\\java\\AppBanSach\\DoAn\\file report\\DoanhSoThang.jasper");
-        JasperPrint  jp = JasperFillManager.fillReport(jr,parameters,conn);
-        JasperViewer jv = new JasperViewer(jp,false);
-        jv.setVisible(true);
-        
-        }
+        try {
+            conn = JDBCConnection.getJDBCConnection();
 
-        catch(Exception e){
+            // Nhập năm cần thống kê
+            String inputYear = JOptionPane.showInputDialog("Nhập năm cần thống kê: ");
+            BigDecimal nam = new BigDecimal(inputYear);
+            Map<String, Object> parameters = new HashMap<>();
+            parameters.put("Năm", nam);
+
+            // Load file báo cáo Jasper đã biên dịch
+            JasperReport jr = JasperCompileManager.compileReport("D:\\OneDrive\\Máy tính\\MHN3#2\\java\\AppBanSach\\DoAn\\file report\\DoanhSoThang.jasper");
+
+            // Nếu tệp tồn tại, thì tiếp tục
+            if (jr != null) {
+                // Tạo và hiển thị báo cáo
+                JasperPrint jp = JasperFillManager.fillReport(jr, parameters, conn);
+                JasperViewer jv = new JasperViewer(jp, false);
+                jv.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(this, "Không thể tải mẫu báo cáo!");
+            }
+        } catch(Exception e) {
             JOptionPane.showMessageDialog(null, e);
-         }
+        }
     }//GEN-LAST:event_thangActionPerformed
 
-    private void topSachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_topSachActionPerformed
+    private void namActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namActionPerformed
         disableAccessWarnings();
-        
-        try{
-        conn = JDBCConnection.getJDBCConnection();
-        
-        String i = JOptionPane.showInputDialog("Nhập năm cần thống kê: "); 
-        BigDecimal nam= new BigDecimal(i);
-        Map<String, Object> parameters = new HashMap<String, Object>();
-        parameters.put("Năm",nam);
-        
-        JasperDesign jd  = JRXmlLoader.load("D:\\OneDrive\\Máy tính\\MHN3#2\\java\\AppBanSach\\DoAn\\file report\\TopSach.jrxml");
-        JasperReport jr = JasperCompileManager.compileReport("D:\\OneDrive\\Máy tính\\MHN3#2\\java\\AppBanSach\\DoAn\\file report\\TopSach.jasper");
-        JasperPrint  jp = JasperFillManager.fillReport(jr,parameters,conn);
-        JasperViewer jv = new JasperViewer(jp,false);
-        jv.setVisible(true);
-        
-        }
+        try {
+            conn = JDBCConnection.getJDBCConnection();
 
-        catch(Exception e){
+            // Load file báo cáo Jasper đã biên dịch
+            JasperReport jr = JasperCompileManager.compileReport("D:\\OneDrive\\Máy tính\\MHN3#2\\java\\AppBanSach\\DoAn\\file report\\DoanhSoNam.jasper");
+
+            // Nếu tệp tồn tại, thì tiếp tục
+            if (jr != null) {
+                // Tạo và hiển thị báo cáo
+                JasperPrint jp = JasperFillManager.fillReport(jr, new HashMap(), conn);
+                JasperViewer jv = new JasperViewer(jp, false);
+                jv.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(this, "Không thể tải mẫu báo cáo!");
+            }
+        } catch(Exception e) {
             JOptionPane.showMessageDialog(null, e);
-         }
-    }//GEN-LAST:event_topSachActionPerformed
+        }
+    }//GEN-LAST:event_namActionPerformed
 
     private void TopKHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TopKHActionPerformed
         disableAccessWarnings();
-        
-        try{
-        conn = JDBCConnection.getJDBCConnection();
-        
-        String i = JOptionPane.showInputDialog("Nhập năm cần thống kê: "); 
-        BigDecimal nam= new BigDecimal(i);
-        Map<String, Object> parameters = new HashMap<String, Object>();
-        parameters.put("Năm",nam);
-        
-        JasperDesign jd  = JRXmlLoader.load("D:\\OneDrive\\Máy tính\\MHN3#2\\java\\AppBanSach\\DoAn\\file report\\TopKH.jrxml");
-        JasperReport jr = JasperCompileManager.compileReport("D:\\OneDrive\\Máy tính\\MHN3#2\\java\\AppBanSach\\DoAn\\file report\\TopKH.jasper");
-        JasperPrint  jp = JasperFillManager.fillReport(jr,parameters,conn);
-        JasperViewer jv = new JasperViewer(jp,false);
-        jv.setVisible(true);
-        }
+        try {
+            conn = JDBCConnection.getJDBCConnection();
 
-        catch(Exception e){
+            // Nhập năm cần thống kê
+            String inputYear = JOptionPane.showInputDialog("Nhập năm cần thống kê: ");
+            BigDecimal nam = new BigDecimal(inputYear);
+            Map<String, Object> parameters = new HashMap<String, Object>();
+            parameters.put("Năm", nam);
+
+            // Load file báo cáo Jasper đã biên dịch
+            JasperReport jr = JasperCompileManager.compileReport("D:\\OneDrive\\Máy tính\\MHN3#2\\java\\AppBanSach\\DoAn\\file report\\TopKH.jasper");
+
+            // Nếu tệp tồn tại, thì tiếp tục
+            if (jr != null) {
+                // Tạo và hiển thị báo cáo
+                JasperPrint jp = JasperFillManager.fillReport(jr, parameters, conn);
+                JasperViewer jv = new JasperViewer(jp, false);
+                jv.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(this, "Không thể tải mẫu báo cáo!");
+            }
+        } catch(Exception e) {
             JOptionPane.showMessageDialog(null, e);
-         }
+        }
     }//GEN-LAST:event_TopKHActionPerformed
 
     /**
@@ -294,8 +609,24 @@ public class BCForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton TopKH;
-    private javax.swing.JPanel jpnBC;
+    private PanelBoder.BarChartIcon barChartIcon1;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton nam;
+    private PanelBoder.PanelBoderFrm panelBoderFrm2;
+    private PanelBoder.PanelBordertamgiac panelBordertamgiac2;
+    private PanelBoder.PanelBordertamgiacphai panelBordertamgiacphai1;
+    private PanelBoder.PanelBordertamgiacphai panelBordertamgiacphai2;
+    private PanelBoder.PanelBordertamgiacphai panelBordertamgiacphai3;
+    private PanelBoder.PanelBordertamgiacphai panelBordertamgiacphai4;
+    private PanelBoder.PanelBordertamgiacphai panelBordertamgiacphai5;
+    private PanelBoder.PanelBordertamgiactrai panelBordertamgiactrai1;
+    private PanelBoder.PanelBordertamgiactrai panelBordertamgiactrai2;
+    private PanelBoder.PanelBordertamgiactrai panelBordertamgiactrai3;
+    private PanelBoder.PanelBordertamgiactrai panelBordertamgiactrai4;
+    private PanelBoder.PanelBordertamgiactrai panelBordertamgiactrai5;
+    private PanelBoder.PieChartIcon pieChartIcon2;
     private javax.swing.JButton thang;
     private javax.swing.JButton topSach;
     // End of variables declaration//GEN-END:variables
